@@ -1,13 +1,23 @@
 import {
   Avatar,
   Box,
+  Button,
+  ButtonGroup,
   Fab,
   Modal,
+  Stack,
   TextField,
   Tooltip,
   Typography,
 } from "@mui/material";
-import { Add as AddIcon } from "@mui/icons-material";
+import {
+  Add as AddIcon,
+  DateRange,
+  EmojiEmotions,
+  Image,
+  PersonAdd,
+  VideoCameraBack,
+} from "@mui/icons-material";
 import React, { useState } from "react";
 import styled from "@emotion/styled";
 
@@ -48,7 +58,14 @@ const Add = () => {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box width={400} height={200} bgcolor="white" p={3} borderRadius={5}>
+        <Box
+          width={400}
+          height={280}
+          bgcolor={"background.default"}
+          color={"text.primary"}
+          p={3}
+          borderRadius={5}
+        >
           <Typography variant="h6" color="gray" textAlign="center">
             Create Post
           </Typography>
@@ -62,13 +79,31 @@ const Add = () => {
             </Typography>
           </UserBox>
           <TextField
-          sx={{width}}
+            sx={{ width: "100%" }}
             id="standard-multiline-static"
             multiline
-            rows={4}
+            rows={3}
             placeholder="What's on your mind"
             variant="standard"
           />
+          <Stack direction="column">
+            <Stack direction="row" gap={1} mt={2} mb={3}>
+              <EmojiEmotions />
+              <Image color="secondary" />
+              <VideoCameraBack color="success" />
+              <PersonAdd color="error" />
+            </Stack>
+            <ButtonGroup
+              fullWidth
+              variant="contained"
+              aria-label="outlinedprimary button group"
+            >
+              <Button>Post</Button>
+              <Button sx={{ width: "100px" }}>
+                <DateRange />
+              </Button>
+            </ButtonGroup>
+          </Stack>
         </Box>
       </StyledModal>
     </>

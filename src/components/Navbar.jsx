@@ -20,8 +20,8 @@ const StyledToolbar = styled(Toolbar)({
 
 const Search = styled("div")(({ theme }) => ({
   backgroundColor: "white",
-  padding: "0 10px",
-  borderRadius: "10px",
+  padding: "2px 15px",
+  borderRadius: "20px",
   width: "40%",
 }));
 
@@ -43,11 +43,11 @@ const Navbar = () => {
     <AppBar position="sticky">
       <StyledToolbar>
         <Typography variant="h6" sx={{ display: { xs: "none", sm: "block" } }}>
-          AIME DEV
+          <a href="#" style={{textDecoration:"none",color:"white",fontWeight:"bold"}}>AIME DEV</a>
         </Typography>
         <DeveloperMode sx={{ display: { xs: "block", sm: "none" } }} />
         <Search>
-          <InputBase placeholder="Search..." />
+          <InputBase placeholder="Search..." sx={{color:"black"}}/>
         </Search>
         <Icons sx={{ display: { sm: "flex" } }}>
           <Badge badgeContent={4} color="error">
