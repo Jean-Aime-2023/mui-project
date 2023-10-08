@@ -1,14 +1,24 @@
-import { Favorite, FavoriteBorder, MoreVert, Share } from '@mui/icons-material'
-import { Avatar, Card, CardActions, CardContent, CardHeader, CardMedia, Checkbox, IconButton, Typography } from '@mui/material'
+import { Favorite, FavoriteBorder, MoreVert, Share } from '@mui/icons-material';
+import {
+  Avatar,
+  Card,
+  CardActions,
+  CardContent,
+  CardHeader,
+  CardMedia,
+  Checkbox,
+  IconButton,
+  Typography,
+} from '@mui/material';
 
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
 const Post = () => {
   return (
-    <Card sx={{margin:5}}>
+    <Card sx={{ margin: 5 }}>
       <CardHeader
         avatar={
-          <Avatar sx={{ bgcolor:"red" }} aria-label="recipe">
+          <Avatar sx={{ bgcolor: 'red' }} aria-label="recipe">
             R
           </Avatar>
         }
@@ -28,19 +38,26 @@ const Post = () => {
       />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem amet architecto perferendis pariatur quis asperiores voluptatem. Deserunt, nihil! Consequuntur molestias accusantium iusto quas ullam? Facilis, velit? Magni explicabo velit assumenda!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem amet
+          architecto perferendis pariatur quis asperiores voluptatem. Deserunt,
+          nihil! Consequuntur molestias accusantium iusto quas ullam? Facilis,
+          velit? Magni explicabo velit assumenda!
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
         <IconButton aria-label="add to favorites">
-        <Checkbox {...label} icon={<FavoriteBorder />} checkedIcon={<Favorite sx={{ color: "red" }}/>} />
+          <Checkbox
+            {...label}
+            icon={<FavoriteBorder />}
+            checkedIcon={<Favorite sx={{ color: 'red' }} />}
+          />
         </IconButton>
         <IconButton aria-label="share">
           <Share />
         </IconButton>
       </CardActions>
     </Card>
-  )
-}
+  );
+};
 
-export default Post
+export default Post;
