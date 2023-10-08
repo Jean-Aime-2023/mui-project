@@ -9,7 +9,7 @@ import {
   TextField,
   Tooltip,
   Typography,
-} from "@mui/material";
+} from '@mui/material';
 import {
   Add as AddIcon,
   DateRange,
@@ -17,21 +17,21 @@ import {
   Image,
   PersonAdd,
   VideoCameraBack,
-} from "@mui/icons-material";
-import React, { useState } from "react";
-import styled from "@emotion/styled";
+} from '@mui/icons-material';
+import React, { useState } from 'react';
+import styled from '@emotion/styled';
 
 const StyledModal = styled(Modal)({
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
 });
 
 const UserBox = styled(Box)({
-  display: "flex",
-  alignItems: "center",
-  gap: "10px",
-  marginBottom: "20px",
+  display: 'flex',
+  alignItems: 'center',
+  gap: '10px',
+  marginBottom: '20px',
 });
 
 const Add = () => {
@@ -42,9 +42,9 @@ const Add = () => {
         onClick={(e) => setOpen(true)}
         title="Add"
         sx={{
-          position: "fixed",
+          position: 'fixed',
           bottom: 20,
-          left: { xs: "calc(50% - 25px)", md: 30 },
+          left: { xs: 'calc(50% - 25px)', md: 30 },
         }}
       >
         <Fab color="primary" aria-label="add">
@@ -61,8 +61,8 @@ const Add = () => {
         <Box
           width={400}
           height={280}
-          bgcolor={"background.default"}
-          color={"text.primary"}
+          bgcolor={'background.default'}
+          color={'text.primary'}
           p={3}
           borderRadius={5}
         >
@@ -79,7 +79,7 @@ const Add = () => {
             </Typography>
           </UserBox>
           <TextField
-            sx={{ width: "100%" }}
+            sx={{ width: '100%' }}
             id="standard-multiline-static"
             multiline
             rows={3}
@@ -99,7 +99,7 @@ const Add = () => {
               aria-label="outlinedprimary button group"
             >
               <Button>Post</Button>
-              <Button sx={{ width: "100px" }}>
+              <Button sx={{ width: '100px' }}>
                 <DateRange />
               </Button>
             </ButtonGroup>
